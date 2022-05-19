@@ -1,30 +1,84 @@
-frontend/src/Frontend.hs:6:1: warning: [-Wunused-imports]
+frontend/src/Auxiliar.hs:6:1: warning: [-Wunused-imports]
     The import of ‘Control.Monad’ is redundant
   |
 6 | import Control.Monad
   | ^^^^^^^^^^^^^^^^^^^^
-frontend/src/Frontend.hs:7:1: warning: [-Wunused-imports]
+frontend/src/Auxiliar.hs:7:1: warning: [-Wunused-imports]
     The qualified import of ‘Data.Text’ is redundant
   |
 7 | import qualified Data.Text as T
   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+frontend/src/Auxiliar.hs:8:1: warning: [-Wunused-imports]
+    The qualified import of ‘Data.Text.Encoding’ is redundant
+  |
+8 | import qualified Data.Text.Encoding as T
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+frontend/src/Auxiliar.hs:9:1: warning: [-Wunused-imports]
+    The import of ‘Language.Javascript.JSaddle’ is redundant
+  |
+9 | import Language.Javascript.JSaddle (eval, liftJSM)
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+frontend/src/Auxiliar.hs:11:1: warning: [-Wunused-imports]
+    The import of ‘Obelisk.Frontend’ is redundant
+   |
+11 | import Obelisk.Frontend
+   | ^^^^^^^^^^^^^^^^^^^^^^^
+frontend/src/Auxiliar.hs:12:1: warning: [-Wunused-imports]
+    The import of ‘Obelisk.Configs’ is redundant
+   |
+12 | import Obelisk.Configs
+   | ^^^^^^^^^^^^^^^^^^^^^^
+frontend/src/Auxiliar.hs:13:1: warning: [-Wunused-imports]
+    The import of ‘Obelisk.Route’ is redundant
+   |
+13 | import Obelisk.Route
+   | ^^^^^^^^^^^^^^^^^^^^
+frontend/src/Auxiliar.hs:14:1: warning: [-Wunused-imports]
+    The import of ‘Obelisk.Generated.Static’ is redundant
+   |
+14 | import Obelisk.Generated.Static
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+frontend/src/Auxiliar.hs:18:1: warning: [-Wunused-imports]
+    The import of ‘Common.Api’ is redundant
+   |
+18 | import Common.Api
+   | ^^^^^^^^^^^^^^^^^
+frontend/src/Auxiliar.hs:19:1: warning: [-Wunused-imports]
+    The import of ‘Common.Route’ is redundant
+   |
+19 | import Common.Route
+   | ^^^^^^^^^^^^^^^^^^^
 frontend/src/Frontend.hs:8:1: warning: [-Wunused-imports]
     The qualified import of ‘Data.Text.Encoding’ is redundant
   |
 8 | import qualified Data.Text.Encoding as T
   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-frontend/src/Frontend.hs:9:1: warning: [-Wunused-imports]
-    The import of ‘Language.Javascript.JSaddle’ is redundant
-  |
-9 | import Language.Javascript.JSaddle (eval, liftJSM)
-  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 frontend/src/Frontend.hs:12:1: warning: [-Wunused-imports]
     The import of ‘Obelisk.Configs’ is redundant
    |
 12 | import Obelisk.Configs
    | ^^^^^^^^^^^^^^^^^^^^^^
-frontend/src/Frontend.hs:18:1: warning: [-Wunused-imports]
+frontend/src/Frontend.hs:17:1: warning: [-Wunused-imports]
+    The import of ‘Data.Map.Strict’ is redundant
+   |
+17 | import Data.Map.Strict
+   | ^^^^^^^^^^^^^^^^^^^^^^
+frontend/src/Frontend.hs:19:1: warning: [-Wunused-imports]
     The import of ‘Common.Api’ is redundant
    |
-18 | import Common.Api
+19 | import Common.Api
    | ^^^^^^^^^^^^^^^^^
+frontend/src/Frontend.hs:23:1: warning: [-Wredundant-constraints]
+    • Redundant constraint: PostBuild t m
+    • In the type signature for:
+           caixas :: forall t (m :: * -> *).
+                     (DomBuilder t m, PostBuild t m) =>
+                     m ()
+   |
+23 | caixas :: (DomBuilder t m, PostBuild t m) => m ()
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+frontend/src/Frontend.hs:25:3: warning: [-Wunused-matches]
+    Defined but not used: ‘t’
+   |
+25 |   t <- inputElement def -- m (Dynamic Text)
+   |   ^
