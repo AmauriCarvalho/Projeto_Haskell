@@ -1,0 +1,30 @@
+frontend/src/Frontend.hs:6:1: warning: [-Wunused-imports]
+    The import of ‘Control.Monad’ is redundant
+  |
+6 | import Control.Monad
+  | ^^^^^^^^^^^^^^^^^^^^
+frontend/src/Frontend.hs:7:1: warning: [-Wunused-imports]
+    The qualified import of ‘Data.Text’ is redundant
+  |
+7 | import qualified Data.Text as T
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+frontend/src/Frontend.hs:8:1: warning: [-Wunused-imports]
+    The qualified import of ‘Data.Text.Encoding’ is redundant
+  |
+8 | import qualified Data.Text.Encoding as T
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+frontend/src/Frontend.hs:9:1: warning: [-Wunused-imports]
+    The import of ‘Language.Javascript.JSaddle’ is redundant
+  |
+9 | import Language.Javascript.JSaddle (eval, liftJSM)
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+frontend/src/Frontend.hs:12:1: warning: [-Wunused-imports]
+    The import of ‘Obelisk.Configs’ is redundant
+   |
+12 | import Obelisk.Configs
+   | ^^^^^^^^^^^^^^^^^^^^^^
+frontend/src/Frontend.hs:18:1: warning: [-Wunused-imports]
+    The import of ‘Common.Api’ is redundant
+   |
+18 | import Common.Api
+   | ^^^^^^^^^^^^^^^^^
