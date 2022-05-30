@@ -19,6 +19,7 @@ import Data.Map.Strict
 import Common.Api
 import Common.Route
 import Auxiliar
+import Menu
 
 caixas :: (DomBuilder t m, PostBuild t m) => m ()
 caixas = el "div" $ do
@@ -35,16 +36,10 @@ frontend = Frontend
       el "title" $ text "WMC"
       elAttr "link" ("href" =: $(static "main.css") <> "type" =: "text/css" <> "rel" =: "stylesheet") blank
   , _frontend_body = do
-      menu
-      el "h1" $ text "World Model Cars"
-      --el "h2" $ text $ T.pack commonStuff
-      el "h2" $ text "leave your suggestion to add to the list"
-      --el "h3" $ text "HELLO WORLD!!!!!!"
-
-      el "label" $ text "Car name/model"
-      caixas
-      elAttr "div" ("id" =: "sendButton") (text "Send")
-        
+      --menu
+      mainPag
+      footPg
+      
       -- `prerender` and `prerender_` let you choose a widget to run on the server
       -- during prerendering and a different widget to run on the client with
       -- JavaScript. The following will generate a `blank` widget on the server and

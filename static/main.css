@@ -3,6 +3,28 @@ body{
   margin: 0;
 }
 
+
+footer {
+  position: fixed;
+  height: 50px;
+  background-color: rgb(168, 158, 158);
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0px;
+  font-style: italic;
+  text-align: center;
+}
+
+.textoSobre {
+  text-align: center;
+  font-size: 20px;
+}
+
+.tabelaCar{
+  margin: 0 auto;
+}
+
 h1{
   text-align: center;
 }
