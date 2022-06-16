@@ -1,13 +1,209 @@
+common/src/Common/Route.hs:23:1: warning: [-Wunused-imports]
+    The import of ‘Text’ from module ‘Data.Text’ is redundant
+   |
+23 | import Data.Text (Text, unpack)
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+common/src/Common/Route.hs:59:55: warning: [-Wdeprecations]
+    In the use of ‘readShowEncoder’ (imported from Obelisk.Route):
+    Deprecated: "This function has been renamed to 'unsafeShowEncoder'. 'readShowEncoder' will be removed in a future release"
+   |
+59 |       BackendRoute_BuscarBr -> PathSegment "buscarbr" readShowEncoder
+   |                                                       ^^^^^^^^^^^^^^^
+common/src/Common/Route.hs:60:55: warning: [-Wdeprecations]
+    In the use of ‘readShowEncoder’ (imported from Obelisk.Route):
+    Deprecated: "This function has been renamed to 'unsafeShowEncoder'. 'readShowEncoder' will be removed in a future release"
+   |
+60 |       BackendRoute_EditarBr -> PathSegment "editarbr" readShowEncoder
+   |                                                       ^^^^^^^^^^^^^^^
+common/src/Common/Route.hs:63:55: warning: [-Wdeprecations]
+    In the use of ‘readShowEncoder’ (imported from Obelisk.Route):
+    Deprecated: "This function has been renamed to 'unsafeShowEncoder'. 'readShowEncoder' will be removed in a future release"
+   |
+63 |       BackendRoute_BuscarJp -> PathSegment "buscarjp" readShowEncoder
+   |                                                       ^^^^^^^^^^^^^^^
+common/src/Common/Route.hs:64:55: warning: [-Wdeprecations]
+    In the use of ‘readShowEncoder’ (imported from Obelisk.Route):
+    Deprecated: "This function has been renamed to 'unsafeShowEncoder'. 'readShowEncoder' will be removed in a future release"
+   |
+64 |       BackendRoute_EditarJp -> PathSegment "editarjp" readShowEncoder
+   |                                                       ^^^^^^^^^^^^^^^
+common/src/Common/Route.hs:67:55: warning: [-Wdeprecations]
+    In the use of ‘readShowEncoder’ (imported from Obelisk.Route):
+    Deprecated: "This function has been renamed to 'unsafeShowEncoder'. 'readShowEncoder' will be removed in a future release"
+   |
+67 |       BackendRoute_BuscarEu -> PathSegment "buscareu" readShowEncoder
+   |                                                       ^^^^^^^^^^^^^^^
+common/src/Common/Route.hs:68:55: warning: [-Wdeprecations]
+    In the use of ‘readShowEncoder’ (imported from Obelisk.Route):
+    Deprecated: "This function has been renamed to 'unsafeShowEncoder'. 'readShowEncoder' will be removed in a future release"
+   |
+68 |       BackendRoute_EditarEu -> PathSegment "editareu" readShowEncoder)
+   |                                                       ^^^^^^^^^^^^^^^
+backend/src/Backend.hs:8:1: warning: [-Wunused-imports]
+    The import of ‘Data.Text’ is redundant
+  |
+8 | import Data.Text
+  | ^^^^^^^^^^^^^^^^
+backend/src/Backend.hs:17:1: warning: [-Wunused-imports]
+    The import of ‘Database.PostgreSQL.Simple’ is redundant
+   |
+17 | import Database.PostgreSQL.Simple
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend/src/Backend.hs:50:17: warning: [-Wunused-do-bind]
+    A do-notation statement discarded a result of type ‘GHC.Int.Int64’
+    Suppress this warning by saying ‘_ <- execute_ dbcon migrationBr’
+   |
+50 |                 execute_ dbcon migrationBr
+   |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend/src/Backend.hs:56:15: warning: [-Wunused-do-bind]
+    A do-notation statement discarded a result of type ‘GHC.Int.Int64’
+    Suppress this warning by saying ‘_ <- execute_ dbcon migrationBr’
+   |
+56 |               execute_ dbcon migrationBr
+   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend/src/Backend.hs:67:19: warning: [-Wunused-do-bind]
+    A do-notation statement discarded a result of type ‘GHC.Int.Int64’
+    Suppress this warning by saying
+      ‘_ <- liftIO
+              $ do execute_ dbcon migrationBr
+                   execute
+                     dbcon
+                     "INSERT INTO brasilcar(marca, modelo, ano) VALUES (?,?,?)"
+                     (brasilcarMarca br, brasilcarModelo br, brasilcarAno br)’
+   |
+67 |                   liftIO $ do
+   |                   ^^^^^^^^^^^...
+backend/src/Backend.hs:68:21: warning: [-Wunused-do-bind]
+    A do-notation statement discarded a result of type ‘GHC.Int.Int64’
+    Suppress this warning by saying ‘_ <- execute_ dbcon migrationBr’
+   |
+68 |                     execute_ dbcon migrationBr
+   |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend/src/Backend.hs:76:19: warning: [-Wunused-do-bind]
+    A do-notation statement discarded a result of type ‘GHC.Int.Int64’
+    Suppress this warning by saying
+      ‘_ <- liftIO
+              $ do execute_ dbcon migrationBr
+                   execute
+                     dbcon
+                     "UPDATE brasilcar SET marca = ?, \
+                                \ modelo = ?, ano = ? WHERE id = ?"
+                     (brasilcarMarca brasilcar, brasilcarModelo brasilcar, 
+                      brasilcarAno brasilcar, pid)’
+   |
+76 |                   liftIO $ do
+   |                   ^^^^^^^^^^^...
+backend/src/Backend.hs:77:21: warning: [-Wunused-do-bind]
+    A do-notation statement discarded a result of type ‘GHC.Int.Int64’
+    Suppress this warning by saying ‘_ <- execute_ dbcon migrationBr’
+   |
+77 |                     execute_ dbcon migrationBr
+   |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend/src/Backend.hs:88:18: warning: [-Wunused-do-bind]
+    A do-notation statement discarded a result of type ‘GHC.Int.Int64’
+    Suppress this warning by saying ‘_ <- execute_ dbcon migrationJp’
+   |
+88 |                  execute_ dbcon migrationJp
+   |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend/src/Backend.hs:94:15: warning: [-Wunused-do-bind]
+    A do-notation statement discarded a result of type ‘GHC.Int.Int64’
+    Suppress this warning by saying ‘_ <- execute_ dbcon migrationJp’
+   |
+94 |               execute_ dbcon migrationJp
+   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend/src/Backend.hs:105:19: warning: [-Wunused-do-bind]
+    A do-notation statement discarded a result of type ‘GHC.Int.Int64’
+    Suppress this warning by saying
+      ‘_ <- liftIO
+              $ do execute_ dbcon migrationJp
+                   execute
+                     dbcon
+                     "INSERT INTO japancar(marca, modelo, ano) VALUES (?,?,?)"
+                     (japancarMarca jp, japancarModelo jp, japancarAno jp)’
+    |
+105 |                   liftIO $ do
+    |                   ^^^^^^^^^^^...
+backend/src/Backend.hs:106:21: warning: [-Wunused-do-bind]
+    A do-notation statement discarded a result of type ‘GHC.Int.Int64’
+    Suppress this warning by saying ‘_ <- execute_ dbcon migrationJp’
+    |
+106 |                     execute_ dbcon migrationJp
+    |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend/src/Backend.hs:114:19: warning: [-Wunused-do-bind]
+    A do-notation statement discarded a result of type ‘GHC.Int.Int64’
+    Suppress this warning by saying
+      ‘_ <- liftIO
+              $ do execute_ dbcon migrationJp
+                   execute
+                     dbcon
+                     "UPDATE japancar SET marca = ?, \
+                                \ modelo = ?, ano = ? WHERE id = ?"
+                     (japancarMarca japancar, japancarModelo japancar, 
+                      japancarAno japancar, pid)’
+    |
+114 |                   liftIO $ do
+    |                   ^^^^^^^^^^^...
+backend/src/Backend.hs:115:21: warning: [-Wunused-do-bind]
+    A do-notation statement discarded a result of type ‘GHC.Int.Int64’
+    Suppress this warning by saying ‘_ <- execute_ dbcon migrationJp’
+    |
+115 |                     execute_ dbcon migrationJp
+    |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend/src/Backend.hs:126:18: warning: [-Wunused-do-bind]
+    A do-notation statement discarded a result of type ‘GHC.Int.Int64’
+    Suppress this warning by saying ‘_ <- execute_ dbcon migrationEu’
+    |
+126 |                  execute_ dbcon migrationEu
+    |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend/src/Backend.hs:132:15: warning: [-Wunused-do-bind]
+    A do-notation statement discarded a result of type ‘GHC.Int.Int64’
+    Suppress this warning by saying ‘_ <- execute_ dbcon migrationEu’
+    |
+132 |               execute_ dbcon migrationEu
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend/src/Backend.hs:143:19: warning: [-Wunused-do-bind]
+    A do-notation statement discarded a result of type ‘GHC.Int.Int64’
+    Suppress this warning by saying
+      ‘_ <- liftIO
+              $ do execute_ dbcon migrationEu
+                   execute
+                     dbcon
+                     "INSERT INTO europecar(marca, modelo, ano) VALUES (?,?,?)"
+                     (europecarMarca eu, europecarModelo eu, europecarAno eu)’
+    |
+143 |                   liftIO $ do
+    |                   ^^^^^^^^^^^...
+backend/src/Backend.hs:144:21: warning: [-Wunused-do-bind]
+    A do-notation statement discarded a result of type ‘GHC.Int.Int64’
+    Suppress this warning by saying ‘_ <- execute_ dbcon migrationEu’
+    |
+144 |                     execute_ dbcon migrationEu
+    |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend/src/Backend.hs:152:19: warning: [-Wunused-do-bind]
+    A do-notation statement discarded a result of type ‘GHC.Int.Int64’
+    Suppress this warning by saying
+      ‘_ <- liftIO
+              $ do execute_ dbcon migrationEu
+                   execute
+                     dbcon
+                     "UPDATE europecar SET marca = ?, \
+                                \ modelo = ?, ano = ? WHERE id = ?"
+                     (europecarMarca europecar, europecarModelo europecar, 
+                      europecarAno europecar, pid)’
+    |
+152 |                   liftIO $ do
+    |                   ^^^^^^^^^^^...
+backend/src/Backend.hs:153:21: warning: [-Wunused-do-bind]
+    A do-notation statement discarded a result of type ‘GHC.Int.Int64’
+    Suppress this warning by saying ‘_ <- execute_ dbcon migrationEu’
+    |
+153 |                     execute_ dbcon migrationEu
+    |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
 frontend/src/Auxiliar.hs:6:1: warning: [-Wunused-imports]
     The import of ‘Control.Monad’ is redundant
   |
 6 | import Control.Monad
   | ^^^^^^^^^^^^^^^^^^^^
-frontend/src/Auxiliar.hs:7:1: warning: [-Wunused-imports]
-    The qualified import of ‘Data.Text’ is redundant
-  |
-7 | import qualified Data.Text as T
-  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 frontend/src/Auxiliar.hs:8:1: warning: [-Wunused-imports]
     The qualified import of ‘Data.Text.Encoding’ is redundant
   |
@@ -28,26 +224,156 @@ frontend/src/Auxiliar.hs:12:1: warning: [-Wunused-imports]
    |
 12 | import Obelisk.Configs
    | ^^^^^^^^^^^^^^^^^^^^^^
-frontend/src/Auxiliar.hs:13:1: warning: [-Wunused-imports]
-    The import of ‘Obelisk.Route’ is redundant
-   |
-13 | import Obelisk.Route
-   | ^^^^^^^^^^^^^^^^^^^^
 frontend/src/Auxiliar.hs:14:1: warning: [-Wunused-imports]
     The import of ‘Obelisk.Generated.Static’ is redundant
    |
 14 | import Obelisk.Generated.Static
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-frontend/src/Auxiliar.hs:18:1: warning: [-Wunused-imports]
+frontend/src/Auxiliar.hs:20:1: warning: [-Wunused-imports]
+    The import of ‘Data.Map’ is redundant
+   |
+20 | import Data.Map (Map)
+   | ^^^^^^^^^^^^^^^^^^^^^
+frontend/src/Auxiliar.hs:43:1: warning: [-Wredundant-constraints]
+    • Redundant constraint: PostBuild t m
+    • In the type signature for:
+           caixas :: forall t (m :: * -> *).
+                     (DomBuilder t m, PostBuild t m) =>
+                     m ()
+   |
+43 | caixas :: (DomBuilder t m, PostBuild t m) => m ()
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+frontend/src/Auxiliar.hs:45:3: warning: [-Wunused-matches]
+    Defined but not used: ‘t’
+   |
+45 |   t <- inputElement def -- m (Dynamic Text)
+   |   ^
+frontend/src/Auxiliar.hs:94:1: warning: [-Wtabs]
+    Tab character found here, and in 202 further locations.
+    Please use spaces instead.
+   |
+94 |            elAttr "h1" ("class" =: "titleAdd") (text "Add Car")
+   | ^^^^^^^^
+frontend/src/Auxiliar.hs:181:17: warning: [-Wincomplete-patterns]
+    Pattern match(es) are non-exhaustive
+    In an equation for ‘escolherPagJp’:
+        Patterns not matched:
+            (Perfil _)
+            (Editar _)
+            (PerfilEu _)
+            (EditarEu _)
+    |
+181 |                 escolherPagJp (PerfilJp pid) = pagPerfilJp pid
+    |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...
+frontend/src/Auxiliar.hs:209:11: warning: [-Wname-shadowing]
+    This binding for ‘jap’ shadows the existing binding
+      bound at frontend/src/Auxiliar.hs:193:7
+    |
+209 |       let jap = fmap (\((a,m),md) -> JapanCar 0 m md a) (zipDyn (zipDyn ano (_inputElement_value marca))(_inputElement_value modelo))    
+    |           ^^^
+frontend/src/Auxiliar.hs:336:17: warning: [-Wincomplete-patterns]
+    Pattern match(es) are non-exhaustive
+    In an equation for ‘escolherPag’:
+        Patterns not matched:
+            (PerfilJp _)
+            (EditarJp _)
+            (PerfilEu _)
+            (EditarEu _)
+    |
+336 |                 escolherPag (Perfil pid) = pagPerfil pid
+    |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...
+frontend/src/Auxiliar.hs:364:11: warning: [-Wname-shadowing]
+    This binding for ‘prod’ shadows the existing binding
+      bound at frontend/src/Auxiliar.hs:348:7
+    |
+364 |       let prod = fmap (\((a,m),md) -> BrasilCar 0 m md a) (zipDyn (zipDyn ano (_inputElement_value marca))(_inputElement_value modelo))    
+    |           ^^^^
+frontend/src/Auxiliar.hs:496:17: warning: [-Wincomplete-patterns]
+    Pattern match(es) are non-exhaustive
+    In an equation for ‘escolherPagEu’:
+        Patterns not matched:
+            (Perfil _)
+            (Editar _)
+            (PerfilJp _)
+            (EditarJp _)
+    |
+496 |                 escolherPagEu (PerfilEu pid) = pagPerfilEu pid
+    |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...
+frontend/src/Auxiliar.hs:524:11: warning: [-Wname-shadowing]
+    This binding for ‘eur’ shadows the existing binding
+      bound at frontend/src/Auxiliar.hs:508:7
+    |
+524 |       let eur = fmap (\((a,m),md) -> EuropeCar 0 m md a) (zipDyn (zipDyn ano (_inputElement_value marca))(_inputElement_value modelo))    
+    |           ^^^
+frontend/src/Menu.hs:6:1: warning: [-Wunused-imports]
+    The import of ‘Control.Monad’ is redundant
+  |
+6 | import Control.Monad
+  | ^^^^^^^^^^^^^^^^^^^^
+frontend/src/Menu.hs:8:1: warning: [-Wunused-imports]
+    The qualified import of ‘Data.Text.Encoding’ is redundant
+  |
+8 | import qualified Data.Text.Encoding as T
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+frontend/src/Menu.hs:9:1: warning: [-Wunused-imports]
+    The import of ‘Language.Javascript.JSaddle’ is redundant
+  |
+9 | import Language.Javascript.JSaddle (eval, liftJSM)
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+frontend/src/Menu.hs:11:1: warning: [-Wunused-imports]
+    The import of ‘Obelisk.Frontend’ is redundant
+   |
+11 | import Obelisk.Frontend
+   | ^^^^^^^^^^^^^^^^^^^^^^^
+frontend/src/Menu.hs:12:1: warning: [-Wunused-imports]
+    The import of ‘Obelisk.Configs’ is redundant
+   |
+12 | import Obelisk.Configs
+   | ^^^^^^^^^^^^^^^^^^^^^^
+frontend/src/Menu.hs:13:1: warning: [-Wunused-imports]
+    The import of ‘Obelisk.Route’ is redundant
+   |
+13 | import Obelisk.Route
+   | ^^^^^^^^^^^^^^^^^^^^
+frontend/src/Menu.hs:14:1: warning: [-Wunused-imports]
+    The import of ‘Obelisk.Generated.Static’ is redundant
+   |
+14 | import Obelisk.Generated.Static
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+frontend/src/Menu.hs:17:1: warning: [-Wunused-imports]
+    The import of ‘Data.Map.Strict’ is redundant
+   |
+17 | import Data.Map.Strict
+   | ^^^^^^^^^^^^^^^^^^^^^^
+frontend/src/Menu.hs:18:1: warning: [-Wunused-imports]
     The import of ‘Common.Api’ is redundant
    |
 18 | import Common.Api
    | ^^^^^^^^^^^^^^^^^
-frontend/src/Auxiliar.hs:19:1: warning: [-Wunused-imports]
+frontend/src/Menu.hs:19:1: warning: [-Wunused-imports]
     The import of ‘Common.Route’ is redundant
    |
 19 | import Common.Route
    | ^^^^^^^^^^^^^^^^^^^
+frontend/src/Menu.hs:21:1: warning: [-Wunused-imports]
+    The import of ‘Text.Read’ is redundant
+   |
+21 | import Text.Read
+   | ^^^^^^^^^^^^^^^^
+frontend/src/Menu.hs:22:1: warning: [-Wunused-imports]
+    The import of ‘Data.Maybe’ is redundant
+   |
+22 | import Data.Maybe
+   | ^^^^^^^^^^^^^^^^^
+frontend/src/Menu.hs:33:1: warning: [-Wredundant-constraints]
+    • Redundant constraint: Prerender t m
+    • In the type signature for:
+           menuLi :: forall t (m :: * -> *).
+                     (DomBuilder t m, MonadHold t m, Prerender t m) =>
+                     m (Dynamic t Pagina)
+   |
+33 | menuLi :: (DomBuilder t m, MonadHold t m, Prerender t m) => m (Dynamic t Pagina)
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 frontend/src/Frontend.hs:8:1: warning: [-Wunused-imports]
     The qualified import of ‘Data.Text.Encoding’ is redundant
   |
@@ -68,17 +394,17 @@ frontend/src/Frontend.hs:19:1: warning: [-Wunused-imports]
    |
 19 | import Common.Api
    | ^^^^^^^^^^^^^^^^^
-frontend/src/Frontend.hs:23:1: warning: [-Wredundant-constraints]
+frontend/src/Frontend.hs:24:1: warning: [-Wredundant-constraints]
     • Redundant constraint: PostBuild t m
     • In the type signature for:
-           caixas :: forall t (m :: * -> *).
-                     (DomBuilder t m, PostBuild t m) =>
-                     m ()
+           Frontend.caixas :: forall t (m :: * -> *).
+                              (DomBuilder t m, PostBuild t m) =>
+                              m ()
    |
-23 | caixas :: (DomBuilder t m, PostBuild t m) => m ()
+24 | caixas :: (DomBuilder t m, PostBuild t m) => m ()
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-frontend/src/Frontend.hs:25:3: warning: [-Wunused-matches]
+frontend/src/Frontend.hs:26:3: warning: [-Wunused-matches]
     Defined but not used: ‘t’
    |
-25 |   t <- inputElement def -- m (Dynamic Text)
+26 |   t <- inputElement def -- m (Dynamic Text)
    |   ^
