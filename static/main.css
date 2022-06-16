@@ -85,6 +85,10 @@ label{
   display: block;
 }
 
+p{
+  text-align: center;
+}
+
 /*.labelTi{
   text-align: left;
   margin-left: 40px;

@@ -68,11 +68,10 @@ home :: (DomBuilder t m, PostBuild t m) => m ()
 home = do
     el "h1" $ text "World Model Cars"
       --el "h2" $ text $ T.pack commonStuff
-    el "h2" $ text "leave your suggestion to add to the list"
+    el "h2" $ text "Explore the pages with the car models"
       --el "h3" $ text "HELLO WORLD!!!!!!"
-    el "label" $ text "Car name/model"
-    caixas
-    elAttr "div" ("id" =: "sendButton") (text "Send")
+    el "p" $ text "The data is updated by the website owners: Amauri do Espirito Santo and Marcos de Jesus"
+    
     
     
 sendRequest :: ToJSON a => R BackendRoute -> a -> XhrRequest T.Text
@@ -562,4 +561,4 @@ footPg :: DomBuilder t m => m ()
 footPg = do
   el "footer" $ do
     el "address" $ do 
-      el "p" $ text "Website made using haskell by Amauri Carvalho e Marcos de Jesus"
+      el "p" $ text "Website made using haskell by Amauri do Espirito Santo and Marcos de Jesus"
